@@ -2,6 +2,7 @@ import ConfigExample from "../../src/components/ConfigExample.tsx";
 
 export const type = "redirect";
 export const config = {
+	format: "ngrok",
 	from: "v0/user/([0-9]+).*",
 	to: "v1/user?id=$1&$args",
 	status_code: 301,
@@ -11,6 +12,5 @@ export const config = {
 };
 
 export const ExampleHTTP = () => (
-  <ConfigExample config={{ actions: [{ type, config }] }} />
-
-)
+	<ConfigExample config={{ actions: [{ type, config }] }} />
+);
